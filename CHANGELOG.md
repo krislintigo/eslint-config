@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/krislintigo/eslint-config/compare/v1.0.0...v1.0.1) (2026-04-26)
+
+### Bug Fixes
+
+* remove extra rule, move plugins to deps ([0b541a0](https://github.com/krislintigo/eslint-config/commit/0b541a0acc8e4ae2c9d6efc08e92061041e45ae2))
+* update pnpm-lock.yaml ([2664c54](https://github.com/krislintigo/eslint-config/commit/2664c54453d444e0980f85a5eaf9a34cdc450fda))
+
 ## 1.0.0 (2026-04-26)
 
 ### Features
