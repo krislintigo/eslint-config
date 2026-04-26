@@ -108,13 +108,6 @@ export const createConfig = (options = {}) => {
       },
     },
 
-    {
-      files: ['src/**/*.types.ts'],
-      rules: {
-        'sonarjs/redundant-type-aliases': 'off',
-      },
-    },
-
     ...extraConfigs,
 
     eslintConfigPrettier,
