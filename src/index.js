@@ -26,9 +26,7 @@ export const createConfig = (options = {}) => {
   } = options
 
   return tseslint.config(
-    {
-      ignores,
-    },
+    { ignores },
 
     {
       files,
