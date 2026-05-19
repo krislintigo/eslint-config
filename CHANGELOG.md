@@ -1,9 +1,3 @@
-## [1.1.1](https://github.com/krislintigo/eslint-config/compare/v1.1.0...v1.1.1) (2026-05-19)
-
-### Bug Fixes
-
-* test provenance ([aa3ec23](https://github.com/krislintigo/eslint-config/commit/aa3ec230c36a29229b0a5b01540b2c4f64298539))
-
 ## [1.1.0](https://github.com/krislintigo/eslint-config/compare/v1.0.1...v1.1.0) (2026-05-19)
 
 ### Features
