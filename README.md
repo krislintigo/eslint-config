@@ -1,7 +1,6 @@
 # @krislintigo/eslint-config
 
 Shared ESLint flat config for TypeScript projects.
-Test Provenance - 2
 
 ## Install
 
@@ -31,7 +30,7 @@ The generated config combines:
 
 - ESLint recommended JavaScript rules.
 - Strict and stylistic type-checked `typescript-eslint` rules.
-- `eslint-plugin-import` recommended TypeScript import rules.
+- `eslint-plugin-import-x` recommended TypeScript import rules.
 - `eslint-plugin-sonarjs` recommended rules.
 - `eslint-config-prettier` as the final config block.
 
@@ -142,15 +141,3 @@ export default createConfig({
   ],
 })
 ```
-
-## Releases
-
-Releases are automated with semantic-release from the `main` branch.
-
-Use Conventional Commits:
-
-- `fix:` publishes a patch release.
-- `feat:` publishes a minor release.
-- `feat!:` or `BREAKING CHANGE:` publishes a major release.
-
-GitHub Actions requires an `NPM_TOKEN` repository secret with publish access. `GITHUB_TOKEN` is provided by Actions.
