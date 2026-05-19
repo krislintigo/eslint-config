@@ -1,7 +1,7 @@
 # @krislintigo/eslint-config
 
 Shared ESLint flat config for TypeScript projects.
-Test Provenance - 1
+Test Provenance - 2
 
 ## Install
 
