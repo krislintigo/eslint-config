@@ -1,3 +1,9 @@
+## [1.1.0](https://github.com/krislintigo/eslint-config/compare/v1.0.1...v1.1.0) (2026-05-19)
+
+### Features
+
+* strict rules for typescript-eslint and import ([fb5d86e](https://github.com/krislintigo/eslint-config/commit/fb5d86e1206dd7e711e574706ec3000d4c03d125))
+
 ## [1.0.1](https://github.com/krislintigo/eslint-config/compare/v1.0.0...v1.0.1) (2026-04-26)
 
 ### Bug Fixes
