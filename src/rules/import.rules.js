@@ -1,0 +1,72 @@
+export const IMPORT_RULES = {
+  // IMPORT
+  'import-x/export': 'off',
+  'import-x/no-deprecated': 'off',
+  'import-x/no-empty-named-blocks': 'error',
+  // 'import-x/no-extraneous-dependencies': 'error', // TODO: consider enabling?
+  'import-x/no-mutable-exports': 'error',
+  'import-x/no-named-as-default': 'off',
+  'import-x/no-named-as-default-member': 'off',
+  'import-x/no-rename-default': 'off',
+  'import-x/no-amd': 'error',
+  'import-x/no-commonjs': 'error',
+  'import-x/no-import-module-exports': 'error',
+  'import-x/default': 'off',
+  'import-x/named': 'off',
+  'import-x/namespace': 'error',
+  'import-x/no-absolute-path': 'error',
+  // 'import-x/no-cycle': ['error', { ignoreExternal: true }], // TODO: consider enabling?
+  'import-x/no-dynamic-require': 'error',
+  'import-x/no-self-import': 'error',
+  'import-x/no-unresolved': 'error',
+  'import-x/no-useless-path-segments': 'warn',
+  'import-x/no-webpack-loader-syntax': 'error',
+  'import-x/consistent-type-specifier-style': 'error',
+  'import-x/first': 'error',
+  'import-x/newline-after-import': 'error',
+  'import-x/no-anonymous-default-export': [
+    'error',
+    {
+      allowArray: false,
+      allowArrowFunction: false,
+      allowAnonymousClass: false,
+      allowAnonymousFunction: false,
+      allowCallExpression: false,
+      allowNew: false,
+      allowLiteral: false,
+      allowObject: false,
+    },
+  ],
+  'import-x/no-default-export': 'error',
+  'import-x/no-duplicates': 'error',
+  'import-x/no-named-default': 'error',
+  'import-x/order': [
+    'warn',
+    {
+      groups: ['builtin', 'external', 'internal', ['parent', 'sibling', 'index'], 'object', 'type'],
+      pathGroups: [
+        {
+          pattern: '@/**',
+          group: 'internal',
+          position: 'after',
+        },
+        {
+          pattern: '~/**',
+          group: 'internal',
+          position: 'after',
+        },
+        {
+          pattern: '#/**',
+          group: 'internal',
+          position: 'after',
+        },
+      ],
+      pathGroupsExcludedImportTypes: ['builtin'],
+      distinctGroup: false,
+      'newlines-between': 'always',
+      alphabetize: { order: 'asc', caseInsensitive: true },
+      named: true,
+      warnOnUnassignedImports: true,
+    },
+  ],
+}

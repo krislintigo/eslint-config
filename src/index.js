@@ -1,9 +1,15 @@
 import pluginJs from '@eslint/js'
 import eslintConfigPrettier from 'eslint-config-prettier'
-import pluginImport from 'eslint-plugin-import'
+import pluginImportX from 'eslint-plugin-import-x'
 import sonarjs from 'eslint-plugin-sonarjs'
 import globalsPackage from 'globals'
 import tseslint from 'typescript-eslint'
+import { createTypeScriptImportResolver } from 'eslint-import-resolver-typescript'
+
+import { TYPESCRIPT_ESLINT_RULES } from './rules/typescript-eslint.rules.js'
+import { IMPORT_RULES } from './rules/import.rules.js'
+
+export { createTypeScriptImportResolver } from 'eslint-import-resolver-typescript'
 
 const globalsMap = {
   browser: globalsPackage.browser,
@@ -34,8 +40,8 @@ export const createConfig = (options = {}) => {
         pluginJs.configs.recommended,
         ...tseslint.configs.strictTypeChecked,
         ...tseslint.configs.stylisticTypeChecked,
-        pluginImport.flatConfigs.recommended,
-        pluginImport.flatConfigs.typescript,
+        pluginImportX.flatConfigs.recommended,
+        pluginImportX.flatConfigs.typescript,
         sonarjs.configs.recommended,
         ...extraExtends,
       ],
@@ -50,53 +56,11 @@ export const createConfig = (options = {}) => {
         },
       },
       settings: {
-        'import/resolver': {
-          typescript: {
-            alwaysTryTypes: true,
-            project: './tsconfig.json',
-          },
-          node: true,
-        },
+        'import-x/resolver-next': [createTypeScriptImportResolver({ alwaysTryTypes: true })],
       },
       rules: {
-        // IMPORT
-        'import/no-unresolved': 'error',
-        'import/no-duplicates': 'error',
-        'import/newline-after-import': 'error',
-        'import/order': [
-          'warn',
-          {
-            groups: ['builtin', 'external', 'internal', ['parent', 'sibling', 'index']],
-            'newlines-between': 'always',
-            alphabetize: { order: 'asc', caseInsensitive: true },
-          },
-        ],
-
-        // TYPESCRIPT
-        '@typescript-eslint/restrict-template-expressions': [
-          'error',
-          {
-            allowNumber: true,
-            allowBoolean: true,
-            allowAny: false,
-            allowNullish: true,
-          },
-        ],
-        '@typescript-eslint/consistent-type-imports': [
-          'error',
-          {
-            prefer: 'type-imports',
-            disallowTypeAnnotations: false,
-          },
-        ],
-        '@typescript-eslint/no-unused-vars': [
-          'warn',
-          {
-            argsIgnorePattern: '^_',
-            varsIgnorePattern: '^_',
-            caughtErrorsIgnorePattern: '^_',
-          },
-        ],
+        ...TYPESCRIPT_ESLINT_RULES,
+        ...IMPORT_RULES,
 
         // SONAR
         'sonarjs/no-implicit-dependencies': 'error',

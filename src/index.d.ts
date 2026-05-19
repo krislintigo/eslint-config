@@ -1,5 +1,7 @@
 import type { Linter } from 'eslint'
 
+export { createTypeScriptImportResolver } from 'eslint-import-resolver-typescript'
+
 /** Runtime global variable sets available for generated ESLint configs. */
 export type RuntimeGlobals = 'browser' | 'node' | 'mixed'
 
