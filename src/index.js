@@ -4,10 +4,12 @@ import pluginImportX from 'eslint-plugin-import-x'
 import sonarjs from 'eslint-plugin-sonarjs'
 import globalsPackage from 'globals'
 import tseslint from 'typescript-eslint'
+import pluginUnicorn from 'eslint-plugin-unicorn'
 import { createTypeScriptImportResolver } from 'eslint-import-resolver-typescript'
 
 import { TYPESCRIPT_ESLINT_RULES } from './rules/typescript-eslint.rules.js'
 import { IMPORT_RULES } from './rules/import.rules.js'
+import { UNICORN_RULES } from './rules/unicorn.rules.js'
 
 export { createTypeScriptImportResolver } from 'eslint-import-resolver-typescript'
 
@@ -36,12 +38,16 @@ export const createConfig = (options = {}) => {
 
     {
       files,
+      plugins: {
+        unicorn: pluginUnicorn,
+      },
       extends: [
         pluginJs.configs.recommended,
         ...tseslint.configs.strictTypeChecked,
         ...tseslint.configs.stylisticTypeChecked,
         pluginImportX.flatConfigs.recommended,
         pluginImportX.flatConfigs.typescript,
+        pluginUnicorn.configs.recommended,
         sonarjs.configs.recommended,
         ...extraExtends,
       ],
@@ -61,10 +67,19 @@ export const createConfig = (options = {}) => {
       rules: {
         ...TYPESCRIPT_ESLINT_RULES,
         ...IMPORT_RULES,
+        ...UNICORN_RULES,
+
+        'no-warning-comments': [
+          'warn',
+          {
+            terms: ['todo', 'fixme', 'xxx'],
+            location: 'start',
+          },
+        ],
 
         // SONAR
         'sonarjs/no-implicit-dependencies': 'error',
-        'sonarjs/todo-tag': 'warn',
+        'sonarjs/todo-tag': 'off',
 
         ...extraRules,
       },
