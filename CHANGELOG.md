@@ -1,3 +1,9 @@
+## [1.2.0](https://github.com/krislintigo/eslint-config/compare/v1.1.1...v1.2.0) (2026-06-09)
+
+### Features
+
+* unicorn plugin ([e58d41a](https://github.com/krislintigo/eslint-config/commit/e58d41a41d91a34787dfeb55a69a7971dcffe163))
+
 ## [1.1.1](https://github.com/krislintigo/eslint-config/compare/v1.1.0...v1.1.1) (2026-05-19)
 
 ### Bug Fixes
