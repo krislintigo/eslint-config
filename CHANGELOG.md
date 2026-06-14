@@ -1,3 +1,9 @@
+## [1.2.1](https://github.com/krislintigo/eslint-config/compare/v1.2.0...v1.2.1) (2026-06-14)
+
+### Bug Fixes
+
+* **prettier:** enable some rules that were turned off ([6331c36](https://github.com/krislintigo/eslint-config/commit/6331c36d49a6c0d49c02e4fc2ff169df7d0695df))
+
 ## [1.2.0](https://github.com/krislintigo/eslint-config/compare/v1.1.1...v1.2.0) (2026-06-09)
 
 ### Features
