@@ -88,5 +88,31 @@ export const createConfig = (options = {}) => {
     ...extraConfigs,
 
     eslintConfigPrettier,
+
+    // Re-enable some rules that turned off by prettier
+    {
+      files,
+      rules: {
+        curly: 'error',
+        'unicorn/template-indent': [
+          'error',
+          {
+            tags: ['outdent', 'dedent', 'sql', 'styled'],
+            functions: ['dedent', 'stripIndent'],
+            selectors: [],
+            comments: ['indent'],
+          },
+        ],
+        'vue/html-self-closing': ['error', {
+          html: {
+            'void': 'always',
+            'normal': 'always',
+            'component': 'always',
+          },
+          svg: 'always',
+          math: 'always',
+        }],
+      }
+    }
   )
 }
