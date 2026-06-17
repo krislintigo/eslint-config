@@ -13,6 +13,7 @@ import { ESLINT_RULES } from './rules/eslint.rules.js'
 import { TYPESCRIPT_ESLINT_RULES } from './rules/typescript-eslint.rules.js'
 import { UNICORN_RULES } from './rules/unicorn.rules.js'
 import { IMPORT_RULES } from './rules/import.rules.js'
+import { STYLISTIC_RULES } from './rules/stylistic.rules.js'
 
 export { createTypeScriptImportResolver } from 'eslint-import-resolver-typescript'
 
@@ -73,6 +74,7 @@ export const createConfig = (options = {}) => {
         ...TYPESCRIPT_ESLINT_RULES,
         ...IMPORT_RULES,
         ...UNICORN_RULES,
+        ...STYLISTIC_RULES,
 
         'no-warning-comments': [
           'warn',
