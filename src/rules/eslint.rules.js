@@ -77,7 +77,13 @@ export const ESLINT_RULES = {
   'no-useless-return': 'error',
   'no-var': 'error',
   'no-void': ['error', { allowAsStatement: true }],
-  // no-warning-comments - here
+  'no-warning-comments': [
+    'warn',
+    {
+      terms: ['todo', 'fixme', 'xxx'],
+      location: 'start',
+    },
+  ],
   'object-shorthand': [
     'error',
     'always',

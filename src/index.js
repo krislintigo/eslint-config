@@ -76,14 +76,6 @@ export const createConfig = (options = {}) => {
         ...UNICORN_RULES,
         ...STYLISTIC_RULES,
 
-        'no-warning-comments': [
-          'warn',
-          {
-            terms: ['todo', 'fixme', 'xxx'],
-            location: 'start',
-          },
-        ],
-
         // SONAR
         'sonarjs/no-implicit-dependencies': 'error',
         'sonarjs/todo-tag': 'off',
