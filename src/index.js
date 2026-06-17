@@ -7,6 +7,7 @@ import tseslint from 'typescript-eslint'
 import pluginUnicorn from 'eslint-plugin-unicorn'
 import { createTypeScriptImportResolver } from 'eslint-import-resolver-typescript'
 
+import { ESLINT_RULES } from './rules/eslint.rules.js'
 import { TYPESCRIPT_ESLINT_RULES } from './rules/typescript-eslint.rules.js'
 import { IMPORT_RULES } from './rules/import.rules.js'
 import { UNICORN_RULES } from './rules/unicorn.rules.js'
@@ -65,6 +66,7 @@ export const createConfig = (options = {}) => {
         'import-x/resolver-next': [createTypeScriptImportResolver({ alwaysTryTypes: true })],
       },
       rules: {
+        ...ESLINT_RULES,
         ...TYPESCRIPT_ESLINT_RULES,
         ...IMPORT_RULES,
         ...UNICORN_RULES,
