@@ -12,8 +12,8 @@ export const STYLISTIC_RULES = {
   '@stylistic/jsx-pascal-case': 'error',
   // '@stylistic/jsx-props-style': 'off' // TODO: consider enabling when stable
   '@stylistic/jsx-self-closing-comp': ['error', { component: true, html: true }],
-  '@stylistic/jsx-shorthand-boolean': 'error',
-  '@stylistic/jsx-shorthand-fragment': 'error',
+  // '@stylistic/jsx-shorthand-boolean': 'error', // TODO: enable in v6
+  // '@stylistic/jsx-shorthand-fragment': 'error', // TODO: enable in v6
   '@stylistic/lines-between-class-members': [
     'error',
     'always',
