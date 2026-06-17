@@ -1,3 +1,9 @@
+## [1.3.0](https://github.com/krislintigo/eslint-config/compare/v1.2.1...v1.3.0) (2026-06-17)
+
+### Features
+
+* updated ruleset for eslint ([baebf2c](https://github.com/krislintigo/eslint-config/commit/baebf2cfbfb624c24ba1135a2cbbbffca12cf77e))
+
 ## [1.2.1](https://github.com/krislintigo/eslint-config/compare/v1.2.0...v1.2.1) (2026-06-14)
 
 ### Bug Fixes
