@@ -1,3 +1,10 @@
+## [1.4.1](https://github.com/krislintigo/eslint-config/compare/v1.4.0...v1.4.1) (2026-06-17)
+
+### Bug Fixes
+
+* **eslint:** no-warning-comments rule to ruleset ([b692575](https://github.com/krislintigo/eslint-config/commit/b692575baf7fe4d48b4de87c30e8e084a7f79c61))
+* **stylistic:** include stylistic rules ([6ffb6ed](https://github.com/krislintigo/eslint-config/commit/6ffb6ed47c429da1d96f3f6936767dc5eeef6487))
+
 ## [1.4.0](https://github.com/krislintigo/eslint-config/compare/v1.3.0...v1.4.0) (2026-06-17)
 
 ### Features
