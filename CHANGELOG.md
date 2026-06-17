@@ -1,3 +1,9 @@
+## [1.4.2](https://github.com/krislintigo/eslint-config/compare/v1.4.1...v1.4.2) (2026-06-17)
+
+### Bug Fixes
+
+* **stylistic:** remove not released rules ([98c7234](https://github.com/krislintigo/eslint-config/commit/98c72345b4e8f88c573ee16bfbdd3af06e25b34e))
+
 ## [1.4.1](https://github.com/krislintigo/eslint-config/compare/v1.4.0...v1.4.1) (2026-06-17)
 
 ### Bug Fixes
