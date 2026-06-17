@@ -1,16 +1,18 @@
 import pluginJs from '@eslint/js'
-import eslintConfigPrettier from 'eslint-config-prettier'
-import pluginImportX from 'eslint-plugin-import-x'
-import sonarjs from 'eslint-plugin-sonarjs'
-import globalsPackage from 'globals'
 import tseslint from 'typescript-eslint'
 import pluginUnicorn from 'eslint-plugin-unicorn'
+import pluginImportX from 'eslint-plugin-import-x'
+import pluginStylistic from '@stylistic/eslint-plugin'
+import eslintConfigPrettier from 'eslint-config-prettier'
+import sonarjs from 'eslint-plugin-sonarjs'
+import globalsPackage from 'globals'
+
 import { createTypeScriptImportResolver } from 'eslint-import-resolver-typescript'
 
 import { ESLINT_RULES } from './rules/eslint.rules.js'
 import { TYPESCRIPT_ESLINT_RULES } from './rules/typescript-eslint.rules.js'
-import { IMPORT_RULES } from './rules/import.rules.js'
 import { UNICORN_RULES } from './rules/unicorn.rules.js'
+import { IMPORT_RULES } from './rules/import.rules.js'
 
 export { createTypeScriptImportResolver } from 'eslint-import-resolver-typescript'
 
@@ -40,6 +42,7 @@ export const createConfig = (options = {}) => {
     {
       files,
       plugins: {
+        '@stylistic': pluginStylistic,
         unicorn: pluginUnicorn,
       },
       extends: [
@@ -96,6 +99,7 @@ export const createConfig = (options = {}) => {
       files,
       rules: {
         curly: 'error',
+        '@stylistic/no-tabs': 'error',
         'unicorn/template-indent': [
           'error',
           {
