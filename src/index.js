@@ -1,10 +1,10 @@
+import { defineConfig } from 'eslint/config'
 import pluginJs from '@eslint/js'
 import tseslint from 'typescript-eslint'
 import pluginUnicorn from 'eslint-plugin-unicorn'
 import pluginImportX from 'eslint-plugin-import-x'
 import pluginStylistic from '@stylistic/eslint-plugin'
 import eslintConfigPrettier from 'eslint-config-prettier'
-import sonarjs from 'eslint-plugin-sonarjs'
 import globalsPackage from 'globals'
 
 import { createTypeScriptImportResolver } from 'eslint-import-resolver-typescript'
@@ -37,7 +37,7 @@ export const createConfig = (options = {}) => {
     extraConfigs = [],
   } = options
 
-  return tseslint.config(
+  return defineConfig(
     { ignores },
 
     {
@@ -53,17 +53,16 @@ export const createConfig = (options = {}) => {
         pluginImportX.flatConfigs.recommended,
         pluginImportX.flatConfigs.typescript,
         pluginUnicorn.configs.recommended,
-        sonarjs.configs.recommended,
         ...extraExtends,
       ],
       languageOptions: {
         ecmaVersion: 'latest',
         sourceType: 'module',
         globals: globalsMap[globals] ?? globalsMap.node,
+        parser: tseslint.parser,
         parserOptions: {
           projectService: true,
-          tsconfigRootDir,
-          parser: tseslint.parser,
+          // tsconfigRootDir,
         },
       },
       settings: {
@@ -75,10 +74,6 @@ export const createConfig = (options = {}) => {
         ...IMPORT_RULES,
         ...UNICORN_RULES,
         ...STYLISTIC_RULES,
-
-        // SONAR
-        'sonarjs/no-implicit-dependencies': 'error',
-        'sonarjs/todo-tag': 'off',
 
         ...extraRules,
       },
@@ -103,15 +98,15 @@ export const createConfig = (options = {}) => {
             comments: ['indent'],
           },
         ],
-        'vue/html-self-closing': ['error', {
-          html: {
-            'void': 'always',
-            'normal': 'always',
-            'component': 'always',
-          },
-          svg: 'always',
-          math: 'always',
-        }],
+        // 'vue/html-self-closing': ['error', { // TODO: enable
+        //   html: {
+        //     'void': 'always',
+        //     'normal': 'always',
+        //     'component': 'always',
+        //   },
+        //   svg: 'always',
+        //   math: 'always',
+        // }],
       }
     }
   )

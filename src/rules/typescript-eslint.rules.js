@@ -1,5 +1,6 @@
 export const TYPESCRIPT_ESLINT_RULES = {
   // TYPESCRIPT
+  'class-method-use-this': 'off',
   'default-param-last': 'off',
   'dot-notation': 'off',
   'max-params': 'off',
@@ -20,6 +21,13 @@ export const TYPESCRIPT_ESLINT_RULES = {
       'ts-nocheck': true,
       'ts-check': true,
       minimumDescriptionLength: 10,
+    },
+  ],
+  '@typescript-eslint/class-methods-use-this': [
+    'error',
+    {
+      ignoreOverrideMethods: true,
+      ignoreClassesThatImplementAnInterface: true,
     },
   ],
   '@typescript-eslint/consistent-type-assertions': [
@@ -102,7 +110,7 @@ export const TYPESCRIPT_ESLINT_RULES = {
     'error',
     { checkLiteralConstAssertions: true },
   ],
-  // '@typescript-eslint/no-unsafe-type-assertion': 'error', // TODO: enable
+  '@typescript-eslint/no-unsafe-type-assertion': 'error',
   '@typescript-eslint/no-unused-private-class-members': 'error',
   '@typescript-eslint/no-unused-vars': [
     'error',
@@ -134,7 +142,19 @@ export const TYPESCRIPT_ESLINT_RULES = {
   '@typescript-eslint/promise-function-async': ['error', { allowAny: true }], // TODO: just think about it
   '@typescript-eslint/require-array-sort-compare': ['error', { ignoreStringArrays: false }],
   '@typescript-eslint/restrict-template-expressions': ['error', { allowNumber: true }],
-  // '@typescript-eslint/strict-boolean-expressions': 'error', // TODO: consider enabling?
+  '@typescript-eslint/strict-boolean-expressions': [
+    'error',
+    {
+      allowAny: false,
+      allowNullableBoolean: false,
+      allowNullableEnum: false,
+      allowNullableNumber: false,
+      allowNullableObject: false,
+      allowNullableString: false,
+      allowNumber: false,
+      allowString: false,
+    },
+  ],
   '@typescript-eslint/strict-void-return': 'error',
   '@typescript-eslint/switch-exhaustiveness-check': [
     'error',

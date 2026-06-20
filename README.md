@@ -10,6 +10,8 @@ pnpm add -D @krislintigo/eslint-config eslint typescript
 
 The package includes its ESLint plugin dependencies. `eslint` and `typescript` are peer dependencies and should be installed in each project that uses the config.
 
+Requires ESLint 10.0.0 or newer.
+
 ## Usage
 
 Create `eslint.config.js`:
