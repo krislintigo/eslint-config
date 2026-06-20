@@ -62,7 +62,7 @@ export const createConfig = (options = {}) => {
         parser: tseslint.parser,
         parserOptions: {
           projectService: true,
-          // tsconfigRootDir,
+          tsconfigRootDir,
         },
       },
       settings: {
