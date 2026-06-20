@@ -59,10 +59,10 @@ export const createConfig = (options = {}) => {
         ecmaVersion: 'latest',
         sourceType: 'module',
         globals: globalsMap[globals] ?? globalsMap.node,
-        parser: tseslint.parser,
         parserOptions: {
           projectService: true,
           tsconfigRootDir,
+          parser: tseslint.parser,
         },
       },
       settings: {
