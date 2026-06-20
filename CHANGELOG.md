@@ -1,3 +1,9 @@
+## [1.5.3](https://github.com/krislintigo/eslint-config/compare/v1.5.2...v1.5.3) (2026-06-20)
+
+### Bug Fixes
+
+* 'no-undef': 'off' rule to eslint ruleset ([c962c7d](https://github.com/krislintigo/eslint-config/commit/c962c7d5f3c467e08c269886531da9f3e9a45273))
+
 ## [1.5.2](https://github.com/krislintigo/eslint-config/compare/v1.5.1...v1.5.2) (2026-06-20)
 
 ### Bug Fixes
