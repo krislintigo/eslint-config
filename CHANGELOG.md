@@ -1,3 +1,9 @@
+## [1.5.0](https://github.com/krislintigo/eslint-config/compare/v1.4.2...v1.5.0) (2026-06-20)
+
+### Features
+
+* use defineConfig, stricter ts config, additional unicorn rules, remove sonarjs ([c46e7f7](https://github.com/krislintigo/eslint-config/commit/c46e7f7fda8f38610fc562d568eba27de13b2dda))
+
 ## [1.4.2](https://github.com/krislintigo/eslint-config/compare/v1.4.1...v1.4.2) (2026-06-17)
 
 ### Bug Fixes
