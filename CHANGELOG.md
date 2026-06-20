@@ -1,3 +1,9 @@
+## [1.5.2](https://github.com/krislintigo/eslint-config/compare/v1.5.1...v1.5.2) (2026-06-20)
+
+### Bug Fixes
+
+* return tseslint.parser to original place ([aadeed4](https://github.com/krislintigo/eslint-config/commit/aadeed47f91659456d196ef3bda191b40d3e0aa0))
+
 ## [1.5.1](https://github.com/krislintigo/eslint-config/compare/v1.5.0...v1.5.1) (2026-06-20)
 
 ### Bug Fixes
