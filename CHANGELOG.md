@@ -1,3 +1,9 @@
+## [1.5.1](https://github.com/krislintigo/eslint-config/compare/v1.5.0...v1.5.1) (2026-06-20)
+
+### Bug Fixes
+
+* return tsconfigRootDir ([c6cf735](https://github.com/krislintigo/eslint-config/commit/c6cf73569c298c4b90eb5a1479cb6b34463c5a11))
+
 ## [1.5.0](https://github.com/krislintigo/eslint-config/compare/v1.4.2...v1.5.0) (2026-06-20)
 
 ### Features
