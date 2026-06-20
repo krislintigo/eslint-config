@@ -8,6 +8,7 @@ export const ESLINT_RULES = {
   'no-promise-executor-return': 'error',
   'no-self-compare': 'error',
   'no-unmodified-loop-condition': 'error',
+  'no-undef': 'off',
   'no-unreachable-loop': 'error',
   'no-unsafe-negation': ['error', { enforceForOrderingRelations: true }],
   'no-unsafe-optional-chaining': ['error', { disallowArithmeticOperators: true }],
