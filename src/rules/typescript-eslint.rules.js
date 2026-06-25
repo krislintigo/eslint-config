@@ -142,19 +142,7 @@ export const TYPESCRIPT_ESLINT_RULES = {
   '@typescript-eslint/promise-function-async': ['error', { allowAny: true }], // TODO: just think about it
   '@typescript-eslint/require-array-sort-compare': ['error', { ignoreStringArrays: false }],
   '@typescript-eslint/restrict-template-expressions': ['error', { allowNumber: true }],
-  '@typescript-eslint/strict-boolean-expressions': [
-    'error',
-    {
-      allowAny: false,
-      allowNullableBoolean: false,
-      allowNullableEnum: false,
-      allowNullableNumber: false,
-      allowNullableObject: true,
-      allowNullableString: false,
-      allowNumber: false,
-      allowString: true,
-    },
-  ],
+  '@typescript-eslint/strict-boolean-expressions': 'error',
   '@typescript-eslint/strict-void-return': 'error',
   '@typescript-eslint/switch-exhaustiveness-check': [
     'error',
