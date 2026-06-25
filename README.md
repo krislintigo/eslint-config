@@ -33,19 +33,27 @@ The generated config combines:
 - ESLint recommended JavaScript rules.
 - Strict and stylistic type-checked `typescript-eslint` rules.
 - `eslint-plugin-import-x` recommended TypeScript import rules.
-- `eslint-plugin-sonarjs` recommended rules.
+- `eslint-plugin-unicorn` recommended rules.
+- `eslint-plugin-n` recommended rules (Node.js environments only — see `environments`).
 - `eslint-config-prettier` as the final config block.
 
 ## Options
 
 ```ts
-type RuntimeGlobals = 'browser' | 'node' | 'mixed'
+type RuntimeGlobals = 'browser' | 'node'
+
+interface Environment {
+  files: string[]
+  env?: RuntimeGlobals
+}
+
+type ConfigPreset = 'vue'
 
 interface CreateConfigOptions {
   tsconfigRootDir?: string
-  globals?: RuntimeGlobals
-  files?: string[]
+  environments?: Environment[]
   ignores?: string[]
+  presets?: ConfigPreset[]
   extraExtends?: Linter.Config[]
   extraRules?: Linter.RulesRecord
   extraConfigs?: Linter.Config[]
@@ -64,26 +72,65 @@ export default createConfig({
 })
 ```
 
-### `globals`
+### `environments`
 
-Runtime globals exposed to linted files.
-
-Default: `'node'`.
-
-Available values:
-
-- `'node'` for Node.js projects.
-- `'browser'` for browser projects.
-- `'mixed'` for projects that expect both browser and Node.js globals.
-
-### `files`
-
-Glob patterns matched by the main type-aware config block.
+The development environments that make up the project. Each entry produces its
+own main config block, scoped to its `files`, with globals and `eslint-plugin-n`
+selected from its `env`.
 
 Default:
 
 ```js
-['**/*.ts']
+[{ files: ['**/*.ts'], env: 'node' }]
+```
+
+Each entry:
+
+- `files` — glob patterns matched by this environment's config block.
+- `env` — the runtime it targets (default `'node'`):
+  - `'node'` for Node.js code.
+  - `'browser'` for browser code.
+
+`env` drives both `languageOptions.globals` and the runtime split for
+`eslint-plugin-n`: its rules are applied for `'node'` and skipped for
+`'browser'`.
+
+This is what makes monorepos work — a browser app and a Node.js server can be
+linted by a single config, each with narrow, explicit globals:
+
+```js
+export default createConfig({
+  tsconfigRootDir: import.meta.dirname,
+  environments: [
+    { files: ['apps/web/**/*.ts'], env: 'browser' },
+    { files: ['apps/server/**/*.ts', 'tooling/**/*.ts'], env: 'node' },
+  ],
+})
+```
+
+### `presets`
+
+Project-dependent presets that enable rules for plugins the consuming project
+supplies itself. This config does not bundle those plugins — a preset is just
+the marker that the corresponding rules should be turned on.
+
+Default: `[]`.
+
+Available presets:
+
+- `'vue'` — enables `vue/html-self-closing` for `**/*.vue` files. The project
+  must still add `eslint-plugin-vue` itself (usually via `extraExtends`).
+
+```js
+import { createConfig } from '@krislintigo/eslint-config'
+import pluginVue from 'eslint-plugin-vue'
+
+export default createConfig({
+  tsconfigRootDir: import.meta.dirname,
+  environments: [{ files: ['**/*.ts', '**/*.vue'], env: 'browser' }],
+  presets: ['vue'],
+  extraExtends: [...pluginVue.configs['flat/recommended']],
+})
 ```
 
 ### `ignores`
@@ -98,7 +145,7 @@ Default:
 
 ### `extraExtends`
 
-Additional flat config presets appended to the main config block's `extends`.
+Additional flat config presets appended to every environment's `extends`.
 
 Use this when a framework preset should share the same files, parser options, globals, resolver settings and base rules.
 
@@ -111,7 +158,7 @@ export default createConfig({
 
 ### `extraRules`
 
-Additional rules merged into the main config block after the package defaults.
+Additional rules merged into every environment's config block after the package defaults.
 
 Use this to override or extend the shared rule set:
 
@@ -119,7 +166,7 @@ Use this to override or extend the shared rule set:
 export default createConfig({
   tsconfigRootDir: import.meta.dirname,
   extraRules: {
-    'sonarjs/todo-tag': 'off',
+    'unicorn/prevent-abbreviations': 'off',
   },
 })
 ```
@@ -137,7 +184,7 @@ export default createConfig({
     {
       files: ['scripts/**/*.ts'],
       rules: {
-        'sonarjs/no-implicit-dependencies': 'off',
+        'no-console': 'off',
       },
     },
   ],
