@@ -1,3 +1,9 @@
+## [2.0.1](https://github.com/krislintigo/eslint-config/compare/v2.0.0...v2.0.1) (2026-06-25)
+
+### Bug Fixes
+
+* soften strict-boolean-expressions ([df2a6f4](https://github.com/krislintigo/eslint-config/commit/df2a6f4a78ef9fb3c422e121052ec4de1929e286))
+
 ## [2.0.0](https://github.com/krislintigo/eslint-config/compare/v1.6.0...v2.0.0) (2026-06-25)
 
 ### ⚠ BREAKING CHANGES
