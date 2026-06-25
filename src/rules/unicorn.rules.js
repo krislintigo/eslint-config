@@ -38,6 +38,7 @@ export const UNICORN_RULES = {
   'unicorn/no-negated-comparison': ['error', { checkLogicalExpressions: true }],
   // 'unicorn/prefer-dispose': 'error' // TODO: maybe enable when ready
   // 'unicorn/prefer-dom-node-html-methods': 'error' // TODO: enable when setHTML available
+  'unicorn/prefer-error-is-error': 'error',
   // 'unicorn/prefer-short-arrow-method': 'error', // TODO: consider enabling
   'unicorn/prefer-temporal': 'warn', // TODO: consider moving to `error` and enabling options
   'unicorn/prefer-uint8array-base64': 'off', // TODO: enable when API is ready
