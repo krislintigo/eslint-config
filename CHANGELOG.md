@@ -1,3 +1,9 @@
+## [1.6.0](https://github.com/krislintigo/eslint-config/compare/v1.5.4...v1.6.0) (2026-06-25)
+
+### Features
+
+* update package versions ([6eed7b1](https://github.com/krislintigo/eslint-config/commit/6eed7b1ab6d6e3e6693f31837eab8571cdecb4db))
+
 ## [1.5.4](https://github.com/krislintigo/eslint-config/compare/v1.5.3...v1.5.4) (2026-06-25)
 
 ### Bug Fixes
