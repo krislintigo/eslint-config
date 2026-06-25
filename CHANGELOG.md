@@ -1,3 +1,13 @@
+## [2.0.0](https://github.com/krislintigo/eslint-config/compare/v1.6.0...v2.0.0) (2026-06-25)
+
+### ⚠ BREAKING CHANGES
+
+* support multiple environments, add node plugin
+
+### Features
+
+* support multiple environments, add node plugin ([1f6e170](https://github.com/krislintigo/eslint-config/commit/1f6e170f0673ce32af77468e5b44fe2c745635f1))
+
 ## [1.6.0](https://github.com/krislintigo/eslint-config/compare/v1.5.4...v1.6.0) (2026-06-25)
 
 ### Features
