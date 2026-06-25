@@ -1,6 +1,6 @@
 {
   "name": "@krislintigo/eslint-config",
-  "version": "1.5.3",
+  "version": "1.5.4",
   "description": "Shared ESLint flat config for TypeScript projects.",
   "type": "module",
   "license": "MIT",

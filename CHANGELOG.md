@@ -1,3 +1,9 @@
+## [1.5.4](https://github.com/krislintigo/eslint-config/compare/v1.5.3...v1.5.4) (2026-06-25)
+
+### Bug Fixes
+
+* soften strict-boolean-expressions in typescript-eslint ([80bedb2](https://github.com/krislintigo/eslint-config/commit/80bedb2774d3b2d4693c60553c5c98d713e5b4dd))
+
 ## [1.5.3](https://github.com/krislintigo/eslint-config/compare/v1.5.2...v1.5.3) (2026-06-20)
 
 ### Bug Fixes
