@@ -1,3 +1,9 @@
+## [2.1.0](https://github.com/krislintigo/eslint-config/compare/v2.0.1...v2.1.0) (2026-06-27)
+
+### Features
+
+* node ruleset ([374e1f3](https://github.com/krislintigo/eslint-config/commit/374e1f3ef988fdb284742c628a087e46d171c175))
+
 ## [2.0.1](https://github.com/krislintigo/eslint-config/compare/v2.0.0...v2.0.1) (2026-06-25)
 
 ### Bug Fixes
