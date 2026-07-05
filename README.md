@@ -81,7 +81,7 @@ selected from its `env`.
 Default:
 
 ```js
-[{ files: ['**/*.ts'], env: 'node' }]
+;[{ files: ['**/*.ts'], env: 'node' }]
 ```
 
 Each entry:
@@ -140,7 +140,7 @@ Glob patterns ignored before the main config is applied.
 Default:
 
 ```js
-['**/dist/**', '**/node_modules/**']
+;['**/dist/**', '**/node_modules/**']
 ```
 
 ### `extraExtends`
