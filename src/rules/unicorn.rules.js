@@ -40,7 +40,7 @@ export const UNICORN_RULES = {
   // 'unicorn/prefer-dispose': 'error' // TODO: maybe enable when ready
   // 'unicorn/prefer-dom-node-html-methods': 'error' // TODO: enable when setHTML available
   'unicorn/prefer-error-is-error': 'error',
-  'unicorn/prefer-explicit-viewport-units': 'error',
+  // 'unicorn/prefer-explicit-viewport-units': 'error', // TODO: enable after css clarification
   // 'unicorn/prefer-short-arrow-method': 'error', // TODO: consider enabling
   'unicorn/prefer-temporal': 'warn', // TODO: consider moving to `error` and enabling options
   'unicorn/require-post-message-target-origin': 'error',
