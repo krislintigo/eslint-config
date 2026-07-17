@@ -20,8 +20,8 @@ export const UNICORN_RULES = {
   'unicorn/consistent-function-style': [
     'error',
     {
-      namedFunctions: 'ignore', // TODO: declaration vs arrow
-      namedExports: 'ignore', // TODO: declaration vs arrow
+      namedFunctions: 'declaration',
+      namedExports: 'declaration',
       callbacks: 'arrow-function',
       objectProperties: 'ignore', // TODO: method vs arrow
       reassignedVariables: 'arrow-function',
@@ -34,13 +34,14 @@ export const UNICORN_RULES = {
   'unicorn/no-array-front-mutation': 'warn',
   'unicorn/no-invalid-file-input-accept': 'error',
   'unicorn/no-manually-wrapped-comments': 'error',
+  // 'unicorn/no-missing-local-resource': 'error', // TODO: consider enabling
   'unicorn/no-null': 'off',
   'unicorn/no-negated-comparison': ['error', { checkLogicalExpressions: true }],
   // 'unicorn/prefer-dispose': 'error' // TODO: maybe enable when ready
   // 'unicorn/prefer-dom-node-html-methods': 'error' // TODO: enable when setHTML available
   'unicorn/prefer-error-is-error': 'error',
+  'unicorn/prefer-explicit-viewport-units': 'error',
   // 'unicorn/prefer-short-arrow-method': 'error', // TODO: consider enabling
   'unicorn/prefer-temporal': 'warn', // TODO: consider moving to `error` and enabling options
-  'unicorn/prefer-uint8array-base64': 'off', // TODO: enable when API is ready
   'unicorn/require-post-message-target-origin': 'error',
 }
