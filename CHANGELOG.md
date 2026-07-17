@@ -1,3 +1,9 @@
+## [2.2.1](https://github.com/krislintigo/eslint-config/compare/v2.2.0...v2.2.1) (2026-07-17)
+
+### Bug Fixes
+
+* remove unicorn/explicit-viewport-units for ruleset ([58fa38c](https://github.com/krislintigo/eslint-config/commit/58fa38cc4986c9160862c4a5d02a2db6bc090ae8))
+
 ## [2.2.0](https://github.com/krislintigo/eslint-config/compare/v2.1.0...v2.2.0) (2026-07-17)
 
 ### Features
