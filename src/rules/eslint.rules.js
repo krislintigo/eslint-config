@@ -36,7 +36,7 @@ export const ESLINT_RULES = {
   'no-alert': 'error',
   'no-bitwise': 'error',
   'no-caller': 'error',
-  'no-console': ['warn', { allow: ['warn', 'error'] }],
+  'no-console': ['warn', { allow: ['warn', 'error', 'debug'] }],
   'no-else-return': ['error', { allowElseIf: false }],
   'no-eq-null': 'error',
   'no-eval': 'error',

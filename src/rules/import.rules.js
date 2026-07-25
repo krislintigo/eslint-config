@@ -41,7 +41,7 @@ export const IMPORT_RULES = {
   'import-x/no-duplicates': 'error',
   'import-x/no-named-default': 'error',
   'import-x/order': [
-    'warn',
+    'error',
     {
       groups: ['builtin', 'external', 'internal', ['parent', 'sibling', 'index'], 'object', 'type'],
       pathGroups: [

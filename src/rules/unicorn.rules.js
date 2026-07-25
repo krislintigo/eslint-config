@@ -42,6 +42,6 @@ export const UNICORN_RULES = {
   'unicorn/prefer-error-is-error': 'error',
   // 'unicorn/prefer-explicit-viewport-units': 'error', // TODO: enable after css clarification
   // 'unicorn/prefer-short-arrow-method': 'error', // TODO: consider enabling
-  'unicorn/prefer-temporal': 'warn', // TODO: consider moving to `error` and enabling options
+  'unicorn/prefer-temporal': 'off', // TODO: enable (with options) when ready
   'unicorn/require-post-message-target-origin': 'error',
 }
