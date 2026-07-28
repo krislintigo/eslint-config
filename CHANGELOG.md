@@ -1,3 +1,9 @@
+## [2.3.1](https://github.com/krislintigo/eslint-config/compare/v2.3.0...v2.3.1) (2026-07-28)
+
+### Bug Fixes
+
+* simplify ruleset for no-default-export rule ([736c442](https://github.com/krislintigo/eslint-config/commit/736c4422a35a9b6d3abee14b4a3ddef1271195a8))
+
 ## [2.3.0](https://github.com/krislintigo/eslint-config/compare/v2.2.1...v2.3.0) (2026-07-25)
 
 ### Features
