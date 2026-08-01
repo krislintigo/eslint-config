@@ -49,7 +49,7 @@ export const TYPESCRIPT_ESLINT_RULES = {
   ],
   '@typescript-eslint/default-param-last': 'error',
   '@typescript-eslint/dot-notation': 'error',
-  // '@typescript-eslint/explicit-function-return-type': 'error', // TODO: consider enabling?
+  '@typescript-eslint/explicit-function-return-type': ['error', { allowIIFEs: true }],
   '@typescript-eslint/explicit-member-accessibility': [
     'error',
     {
@@ -59,7 +59,7 @@ export const TYPESCRIPT_ESLINT_RULES = {
       },
     },
   ],
-  // '@typescript-eslint/explicit-module-boundary-types': 'error', // TODO: consider enabling?
+  '@typescript-eslint/explicit-module-boundary-types': 'error',
   '@typescript-eslint/max-params': ['error', { max: 4 }],
   // '@typescript-eslint/member-ordering': 'error', // TODO: consider partial enabling?
   '@typescript-eslint/method-signature-style': 'error',
