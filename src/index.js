@@ -96,6 +96,21 @@ export const createConfig = (options = {}) => {
 
     ...mainConfigs,
 
+    // Disable default export restrictions for config files
+    {
+      files: ['**/*.config.{js,ts}', '**/*.config.*.{js,ts}'],
+      rules: {
+        'import-x/no-default-export': 'off',
+      },
+    },
+    // Disable process.env usage errors for env files
+    {
+      files: ['**/env.ts', '**/env.*.{js,ts}', '**/*.env.{js,ts}'],
+      rules: {
+        'n/no-process-env': 'off',
+      },
+    },
+
     ...extraConfigs,
 
     eslintConfigPrettier,
