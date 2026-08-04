@@ -1,6 +1,7 @@
 export const UNICORN_RULES = {
   // UNICORN
   'unicorn/comment-content': ['warn', { checkUniformCase: false }], // TODO: check if required
+  'unicorn/consistent-arrow-return-style': 'error',
   // 'unicorn/consistent-boolean-name': ['error', { checkProperties: true }], // TODO: should check properties?
   'unicorn/consistent-class-member-order': [
     'error',
@@ -30,8 +31,10 @@ export const UNICORN_RULES = {
   ],
   'unicorn/custom-error-definition': 'error',
   'unicorn/isolated-functions': 'off', // TODO: consider enabling when example is found
+  'unicorn/iteration-fallback-style': 'error',
   'unicorn/name-replacements': 'off', // TODO: consider enabling with allowList
   'unicorn/no-array-front-mutation': 'warn',
+  'unicorn/no-barrel-files': 'error',
   'unicorn/no-invalid-file-input-accept': 'error',
   'unicorn/no-manually-wrapped-comments': 'error',
   // 'unicorn/no-missing-local-resource': 'error', // TODO: consider enabling

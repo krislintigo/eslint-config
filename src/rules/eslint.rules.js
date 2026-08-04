@@ -16,7 +16,6 @@ export const ESLINT_RULES = {
   'use-isnan': ['error', { enforceForSwitchCase: true, enforceForIndexOf: true }],
 
   'accessor-pairs': 'error',
-  'arrow-body-style': ['error', 'as-needed'],
   complexity: ['warn', { max: 15, variant: 'classic' }],
   curly: ['error', 'all'],
   'default-case-last': 'error',
