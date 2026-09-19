@@ -44,7 +44,10 @@ export const UNICORN_RULES = {
   // 'unicorn/prefer-dom-node-html-methods': 'error' // TODO: enable when setHTML available
   'unicorn/prefer-error-is-error': 'error',
   // 'unicorn/prefer-explicit-viewport-units': 'error', // TODO: enable after css clarification
+  'unicorn/prefer-json-import': 'error',
   // 'unicorn/prefer-short-arrow-method': 'error', // TODO: consider enabling
   'unicorn/prefer-temporal': 'off', // TODO: enable (with options) when ready
+  'unicorn/prefer-uint8array-base64': 'off', // TODO: enable when API is ready
+  'unicorn/prefer-uint8array-hex': 'off', // TODO: enable when API is ready
   'unicorn/require-post-message-target-origin': 'error',
 }

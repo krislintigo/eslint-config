@@ -7,7 +7,7 @@ export const ESLINT_RULES = {
   'no-inner-declarations': ['error', 'both', { blockScopedFunctions: 'disallow' }],
   'no-promise-executor-return': 'error',
   'no-self-compare': 'error',
-  'no-unmodified-loop-condition': 'error',
+  'no-unmodified-loop-condition': ['error', { checkConditionalExpressions: true }],
   'no-undef': 'off',
   'no-unreachable-loop': 'error',
   'no-unsafe-negation': ['error', { enforceForOrderingRelations: true }],

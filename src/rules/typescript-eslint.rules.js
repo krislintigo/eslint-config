@@ -89,6 +89,7 @@ export const TYPESCRIPT_ESLINT_RULES = {
   ],
   '@typescript-eslint/no-loop-func': 'error',
   // '@typescript-eslint/no-magic-numbers': 'error', // TODO: just think about it
+  '@typescript-eslint/no-misused-promises': ['error', { checksConditionals: { flagUnions: 'all' } }],
   '@typescript-eslint/no-shadow': 'error',
   '@typescript-eslint/no-unnecessary-boolean-literal-compare': [
     'error',

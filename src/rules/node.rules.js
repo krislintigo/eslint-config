@@ -14,7 +14,9 @@ export const NODE_RULES = {
   'n/prefer-global/timers': ['error', 'always'],
   'n/prefer-global/url': ['error', 'always'],
   'n/prefer-global/url-search-params': ['error', 'always'],
+  'n/prefer-import/assert-strict': 'error',
   'n/prefer-node-protocol': 'error',
+  'n/prefer-process-get-builtin-module': 'error',
   'n/prefer-promises/dns': 'error',
   'n/prefer-promises/fs': 'error',
 }
