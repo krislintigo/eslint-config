@@ -1,3 +1,13 @@
+## [2.7.0](https://github.com/krislintigo/eslint-config/compare/v2.6.0...v2.7.0) (2026-09-19)
+
+### Features
+
+* update plugins versions, add new rules and options across configs ([87f08fb](https://github.com/krislintigo/eslint-config/commit/87f08fb9ad1e1b9f6277fa499dfbd28b7ce962ef))
+
+### Bug Fixes
+
+* update lockfile ([96b7a5d](https://github.com/krislintigo/eslint-config/commit/96b7a5d0c2f0b81308711f9414fea6fd86bc95c6))
+
 ## [2.6.0](https://github.com/krislintigo/eslint-config/compare/v2.5.1...v2.6.0) (2026-08-04)
 
 ### Features
