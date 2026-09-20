@@ -2,7 +2,14 @@ export const UNICORN_RULES = {
   // UNICORN
   'unicorn/comment-content': ['warn', { checkUniformCase: false }], // TODO: check if required
   'unicorn/consistent-arrow-return-style': 'error',
-  // 'unicorn/consistent-boolean-name': ['error', { checkProperties: true }], // TODO: should check properties?
+  'unicorn/consistent-boolean-name': [
+    'error',
+    {
+      wrappers: {
+        Ref: 'value',
+      },
+    },
+  ],
   'unicorn/consistent-class-member-order': [
     'error',
     {
@@ -35,6 +42,7 @@ export const UNICORN_RULES = {
   'unicorn/name-replacements': 'off', // TODO: consider enabling with allowList
   'unicorn/no-array-front-mutation': 'warn',
   'unicorn/no-barrel-files': 'error',
+  'unicorn/no-break-in-nested-loop': ['error', { checkContinue: true }],
   'unicorn/no-invalid-file-input-accept': 'error',
   'unicorn/no-manually-wrapped-comments': 'error',
   // 'unicorn/no-missing-local-resource': 'error', // TODO: consider enabling
@@ -43,11 +51,11 @@ export const UNICORN_RULES = {
   // 'unicorn/prefer-dispose': 'error' // TODO: maybe enable when ready
   // 'unicorn/prefer-dom-node-html-methods': 'error' // TODO: enable when setHTML available
   'unicorn/prefer-error-is-error': 'error',
-  // 'unicorn/prefer-explicit-viewport-units': 'error', // TODO: enable after css clarification
   'unicorn/prefer-json-import': 'error',
   // 'unicorn/prefer-short-arrow-method': 'error', // TODO: consider enabling
   'unicorn/prefer-temporal': 'off', // TODO: enable (with options) when ready
   'unicorn/prefer-uint8array-base64': 'off', // TODO: enable when API is ready
   'unicorn/prefer-uint8array-hex': 'off', // TODO: enable when API is ready
   'unicorn/require-post-message-target-origin': 'error',
+  'unicorn/single-line-block-comment-style': ['error', 'single-line'],
 }

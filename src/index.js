@@ -81,7 +81,7 @@ export const createConfig = (options = {}) => {
         ...UNICORN_RULES,
         ...STYLISTIC_RULES,
 
-        ...(isNodeEnv ? NODE_RULES : {}),
+        ...(isNodeEnv && NODE_RULES),
 
         ...extraRules,
       },
