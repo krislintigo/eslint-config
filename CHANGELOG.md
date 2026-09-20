@@ -1,3 +1,9 @@
+## [2.8.0](https://github.com/krislintigo/eslint-config/compare/v2.7.0...v2.8.0) (2026-09-20)
+
+### Features
+
+* updated plugins and ruleset ([5f32018](https://github.com/krislintigo/eslint-config/commit/5f3201867ebc2013ee8e9fb532c03a303d657bc3))
+
 ## [2.7.0](https://github.com/krislintigo/eslint-config/compare/v2.6.0...v2.7.0) (2026-09-19)
 
 ### Features
