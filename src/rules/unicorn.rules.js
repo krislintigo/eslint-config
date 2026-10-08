@@ -41,6 +41,7 @@ export const UNICORN_RULES = {
   'unicorn/iteration-fallback-style': 'error',
   'unicorn/name-replacements': 'off', // TODO: consider enabling with allowList
   'unicorn/no-array-front-mutation': 'warn',
+  'unicorn/no-asterisk-prefix-in-documentation-comments': 'off',
   'unicorn/no-barrel-files': 'error',
   'unicorn/no-break-in-nested-loop': ['error', { checkContinue: true }],
   'unicorn/no-invalid-file-input-accept': 'error',

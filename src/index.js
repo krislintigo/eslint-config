@@ -101,6 +101,7 @@ export const createConfig = (options = {}) => {
       files: ['**/*.config.{js,ts}', '**/*.config.*.{js,ts}'],
       rules: {
         'import-x/no-default-export': 'off',
+        'unicorn/no-top-level-side-effects': 'off',
       },
     },
     // Disable process.env usage errors for env files
